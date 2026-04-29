@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadralo — Gestión inteligente para tu negocio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;80 <style>
+:root{--blue:#3B9EDE;--blue-dark:#1A73C8;--blue-light:#EBF5FD;--white:#ffffff;--g *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;} body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);o nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cent .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo span{font-family:'Sora',sans-serif;font-weight:700;font-size:20px;color
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--gray);text-decoration:non
+.nav-links a:hover{color:var(--blue);}
+.nav-cta{background:var(--blue)!important;color:white!important;padding:10px 22px
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;pad
+.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:cen
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-
+.hero-title{font-family:'Sora',sans-serif;font-size:clamp(34px,4.5vw,56px);font-w
+.hero-title em{font-style:normal;color:var(--blue);}
+.hero-sub{font-size:17px;line-height:1.75;color:var(--gray);margin-bottom:28px;fo
+.store-buttons{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-store{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;bord
+.btn-apple{background:var(--dark);color:white;border-color:var(--dark);}
+.btn-android{background:white;color:var(--dark);border-color:rgba(59,158,222,0.3)
+.btn-store-icon{font-size:22px;}
+.btn-store-text{display:flex;flex-direction:column;}
+.btn-store-small{font-size:10px;font-weight:400;opacity:0.7;}
+.btn-store-big{font-size:15px;font-weight:700;line-height:1.2;}
+.features{padding:100px 48px;background:var(--card-bg);}
+.section-label{text-align:center;font-size:12px;font-weight:700;color:var(--blue)
+.section-title{text-align:center;font-family:'Sora',sans-serif;font-size:clamp(26
+.section-sub{text-align:center;font-size:16px;color:var(--gray);max-width:520px;m
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-widt
+.feature-card{background:white;border-radius:20px;padding:30px 26px;border:1px so
+.feature-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(59,158
+.feature-icon{width:50px;height:50px;background:var(--blue-light);border-radius:1
+.feature-title{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;color
+.feature-desc{font-size:14px;color:var(--gray);line-height:1.7;} .pricing{padding:100px 48px;background:white;}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:760px
+.pricing-card{border-radius:24px;padding:38px 34px;position:relative;}
+.pricing-card.basic{background:var(--card-bg);border:1.5px solid rgba(59,158,222,
+.pricing-card.annual{background:var(--dark);box-shadow:0 24px 64px rgba(15,28,53,
+.pricing-plan{font-size:12px;font-weight:700;text-transform:uppercase;letter-spac
+.pricing-card.basic .pricing-plan{color:var(--blue);}
+.pricing-card.annual .pricing-plan{color:rgba(255,255,255,0.45);}
+.pricing-price{font-family:'Sora',sans-serif;font-size:52px;font-weight:800;line-
+.pricing-card.basic .pricing-price{color:var(--dark);}
+.pricing-card.annual .pricing-price{color:white;} .pricing-features{list-style:none;margin-bottom:28px;display:flex;flex-direction:
+.pricing-features li{display:flex;align-items:center;gap:10px;font-size:14px;}
+.pricing-card.basic .pricing-features li{color:var(--dark);}
+.pricing-card.annual .pricing-features li{color:rgba(255,255,255,0.8);}
+.pricing-features li::before{content:'✓';width:19px;height:19px;background:var(-.pricing-btn{display:block;text-align:center;padding:13px;border-radius:100px;fon
+.cta{padding:100px 48px;text-align:center;background:linear-gradient(160deg,var(-
+.cta-title{font-family:'Sora',sans-serif;font-size:clamp(28px,5vw,50px);font-weig
+.cta-title span{color:var(--blue);}
+.cta-sub{font-size:17px;color:var(--gray);margin-bottom:36px;} .cta-stores{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;} footer{background:var(--dark);padding:36px 48px;display:flex;align-items:center;j .footer-logo span{font-family:'Sora',sans-serif;font-weight:700;font-size:16px;co
+.footer-text{font-size:13px;color:rgba(255,255,255,0.28);}
+.footer-links a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;
+@media(max-width:900px){
+.hero-content{grid-template-columns:1fr;}
+.features-grid{grid-template-columns:1fr;} .pricing-grid{grid-template-columns:1fr;max-width:380px;} nav{padding:14px 20px;} .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="#">
+    <span>Cuadralo</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Funciones</a></li>
+    <li><a href="#pricing">Precios</a></li>
+    <li><a href="#pricing" class="nav-cta">Empezar gratis</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">  Hecho para negocios dominicanos</div>
+      <h1 class="hero-title">Tu negocio bajo <em>control total</em></h1>
+      <p class="hero-sub">Gestiona inventario, registra ventas y consulta tu asis
+      <div class="store-buttons">
+        <a href="#" class="btn-store btn-apple">
+          <span class="btn-store-icon"> </span>
+          <div class="btn-store-text"><span class="btn-store-small">Disponible en
+        </a>
+        <a href="#" class="btn-store btn-android">
+          <span class="btn-store-icon">▶</span>
+          <div class="btn-store-text"><span class="btn-store-small">Disponible en
+        </a>
+      </div>
+    </div>
+    <div style="background:var(--blue-light);border-radius:24px;padding:40px;text       <div style="font-size:80px"> </div>
+      <p style="font-family:'Sora',sans-serif;font-weight:700;color:var(--blue);m       <p style="color:var(--gray);font-size:14px;margin-top:8px;">Inventario · Ve
+    </div>   </div>
+</section>
+<section class="features" id="features">
+  <p class="section-label">Funciones</p>
+  <h2 class="section-title">Todo lo que tu negocio necesita</h2>
+  <p class="section-sub">Diseñado para colmados, boutiques, farmacias y ferreterí
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Control de Inventario</h3>
+      <p class="feature-desc">Registra productos, controla el stock en tiempo rea     </div>
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Registro de Ventas</h3>
+      <p class="feature-desc">Registra ventas en segundos. Acepta efectivo, tarje     </div>
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Carga por Foto o Archivo</h3>
+      <p class="feature-desc">Toma una foto de tus productos o sube un archivo y     </div>
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Asistente de IA</h3>
+      <p class="feature-desc">Pregúntale en español qué vendiste hoy, qué product     </div>
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Reportes Claros</h3>
+      <p class="feature-desc">Ve cuánto vendiste, por qué método de pago y export     </div>
+    <div class="feature-card">
+      <div class="feature-icon"> </div>
+      <h3 class="feature-title">Notificaciones</h3>
+      <p class="feature-desc">Alertas de stock bajo, crítico y ventas confirmadas
+    </div>   </div>
+</section>
+<section class="pricing" id="pricing">
+  <p class="section-label">Precios</p>
+  <h2 class="section-title">Simple y transparente</h2>
+  <p class="section-sub">Sin sorpresas. Empieza con 15 días gratis y elige el pla
+  <div class="pricing-grid">
+    <div class="pricing-card basic">
+      <p class="pricing-plan">Mensual</p>
+      <div class="pricing-price">$15<span style="font-size:24px">.99</span></div>
+      <p style="font-size:13px;color:var(--gray);margin-bottom:26px;">USD por mes
+      <ul class="pricing-features">
+        <li>Inventario ilimitado</li>
+        <li>Registro de ventas</li>
+        <li>Reportes mensuales</li>
+        <li>Asistente de IA</li>
+        <li>Notificaciones inteligentes</li>
+      </ul>
+      <a href="#" class="pricing-btn">Empezar gratis</a>
+    </div>
+    <div class="pricing-card annual">
+      <p class="pricing-plan">Anual</p>
+      <div class="pricing-price">$159<span style="font-size:24px">.99</span></div
+      <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:26px;">U
+      <ul class="pricing-features">
+        <li>Todo el plan mensual</li>
+        <li>2 meses gratis</li>
+        <li>Soporte prioritario</li>
+        <li>Carga por foto y archivo IA</li>
+        <li>Acceso anticipado a nuevas funciones</li>
+      </ul>
+      <a href="#" class="pricing-btn">Elegir anual</a>
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <h2 class="cta-title">¿Listo para <span>cuadrar</span> tu negocio?</h2>
+  <p class="cta-sub">Únete a los negocios dominicanos que ya usan Cuadralo. 15 dí
+  <div class="cta-stores">
+    <a href="#" class="btn-store btn-apple">
+      <span class="btn-store-icon"> </span>
+      <div class="btn-store-text"><span class="btn-store-small">Disponible en</sp     </a>
+    <a href="#" class="btn-store btn-android">
+      <span class="btn-store-icon">▶</span>
+      <div class="btn-store-text"><span class="btn-store-small">Disponible en</sp
+    </a>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo"><span>Cuadralo</span></div>
+  <p class="footer-text">© 2026 NOVACODE TECH, LLC. Todos los derechos reservados
+  <div class="footer-links">
+    <a href="#">Privacidad</a>
+    <a href="#">Términos</a>
+    <a href="#">Soporte</a>
+  </div>
+</footer>
+</body>
+</html>
