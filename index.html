@@ -19,7 +19,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--dark); overflow-x: hidden; }
- 
+
 /* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -35,7 +35,7 @@ nav {
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--blue); }
 .nav-cta { background: var(--blue) !important; color: white !important; padding: 10px 22px; border-radius: 100px; font-weight: 600 !important; }
- 
+
 /* HERO */
 .hero {
   min-height: 100vh;
@@ -80,11 +80,12 @@ nav {
 .btn-apple:hover { background: #1a2f52; transform: translateY(-2px); }
 .btn-android { background: white; color: var(--dark); border-color: rgba(59,158,222,0.3); box-shadow: 0 8px 24px rgba(59,158,222,0.12); }
 .btn-android:hover { background: var(--blue-light); border-color: var(--blue); transform: translateY(-2px); }
-.btn-store-icon { font-size: 22px; line-height: 1; }
+.btn-store-icon { font-size: 22px; line-height: 1; display: flex; align-items: center; justify-content: center; }
+.btn-store-icon svg { width: 22px; height: 22px; }
 .btn-store-text { display: flex; flex-direction: column; }
 .btn-store-small { font-size: 10px; font-weight: 400; opacity: 0.7; }
 .btn-store-big { font-size: 15px; font-weight: 700; line-height: 1.2; }
- 
+
 /* PHONE MOCKUP */
 .hero-visual { display: flex; justify-content: center; align-items: center; }
 .phone-wrap { animation: float 4s ease-in-out infinite; }
@@ -150,7 +151,7 @@ nav {
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
   font-size: 9px; color: white;
 }
- 
+
 /* FEATURES */
 .features { padding: 100px 48px; background: var(--card-bg); }
 .section-label { text-align: center; font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 12px; }
@@ -165,7 +166,7 @@ nav {
 .feature-icon { width: 50px; height: 50px; background: var(--blue-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
 .feature-title { font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
 .feature-desc { font-size: 14px; color: var(--gray); line-height: 1.7; font-weight: 300; }
- 
+
 /* PRICING */
 .pricing { padding: 100px 48px; background: white; }
 .trial-banner {
@@ -197,10 +198,10 @@ nav {
 .pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; }
 .pricing-card.basic .pricing-features li { color: var(--dark); }
 .pricing-card.annual .pricing-features li { color: rgba(255,255,255,0.8); }
-.pricing-features li::before { content: '✓'; width: 19px; height: 19px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+.pricing-features li .check { width: 19px; height: 19px; min-width: 19px; background: var(--blue); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; }
 .pricing-btn { display: block; text-align: center; padding: 13px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all .25s; cursor: pointer; background: var(--blue); color: white; }
 .pricing-btn:hover { background: var(--blue-dark); }
- 
+
 /* CTA */
 .cta {
   padding: 100px 48px; text-align: center;
@@ -210,7 +211,7 @@ nav {
 .cta-title span { color: var(--blue); }
 .cta-sub { font-size: 17px; color: var(--gray); margin-bottom: 36px; font-weight: 300; }
 .cta-stores { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
- 
+
 /* FOOTER */
 footer {
   background: var(--dark); padding: 36px 48px;
@@ -221,7 +222,7 @@ footer {
 .footer-links { display: flex; gap: 22px; }
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color .2s; cursor: pointer; }
 .footer-links a:hover { color: var(--blue); }
- 
+
 /* RESPONSIVE */
 @media(max-width: 900px) {
   nav { padding: 14px 20px; }
@@ -239,7 +240,7 @@ footer {
 </style>
 </head>
 <body>
- 
+
 <nav>
   <a class="nav-logo" href="#">
     <span>Cuadralo</span>
@@ -250,7 +251,7 @@ footer {
     <li><a href="#pricing" class="nav-cta">Empezar gratis</a></li>
   </ul>
 </nav>
- 
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
@@ -261,14 +262,18 @@ footer {
       <div class="hero-trial">🎁 15 días de prueba gratis — sin tarjeta de crédito</div>
       <div class="store-buttons">
         <a href="#" class="btn-store btn-apple">
-          <span class="btn-store-icon">🍎</span>
+          <span class="btn-store-icon">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          </span>
           <div class="btn-store-text">
             <span class="btn-store-small">Disponible en</span>
             <span class="btn-store-big">App Store</span>
           </div>
         </a>
         <a href="#" class="btn-store btn-android">
-          <span class="btn-store-icon">▶</span>
+          <span class="btn-store-icon">
+            <svg viewBox="0 0 24 24" fill="#3B9EDE" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l15 8.5c.6.34.6 1.26 0 1.6l-15 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+          </span>
           <div class="btn-store-text">
             <span class="btn-store-small">Disponible en</span>
             <span class="btn-store-big">Google Play</span>
@@ -314,7 +319,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- FEATURES -->
 <section class="features" id="features">
   <p class="section-label">Funciones</p>
@@ -353,7 +358,7 @@ footer {
     </div>
   </div>
 </section>
- 
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <p class="section-label">Precios</p>
@@ -372,11 +377,11 @@ footer {
       <div class="pricing-price"><sup>$</sup>15.99</div>
       <p class="pricing-period">USD por mes</p>
       <ul class="pricing-features">
-        <li>Inventario ilimitado</li>
-        <li>Registro de ventas</li>
-        <li>Reportes mensuales</li>
-        <li>Asistente de IA</li>
-        <li>Notificaciones inteligentes</li>
+        <li><span class="check">✓</span>Inventario ilimitado</li>
+        <li><span class="check">✓</span>Registro de ventas</li>
+        <li><span class="check">✓</span>Reportes mensuales</li>
+        <li><span class="check">✓</span>Asistente de IA</li>
+        <li><span class="check">✓</span>Notificaciones inteligentes</li>
       </ul>
       <a href="#" class="pricing-btn">Empezar gratis</a>
     </div>
@@ -386,33 +391,37 @@ footer {
       <div class="pricing-price"><sup>$</sup>159.99</div>
       <p class="pricing-period">USD por año · solo $13.33/mes</p>
       <ul class="pricing-features">
-        <li>Todo el plan mensual</li>
-        <li>2 meses gratis</li>
-        <li>Soporte prioritario</li>
-        <li>Carga por foto y archivo IA</li>
-        <li>Acceso anticipado a nuevas funciones</li>
+        <li><span class="check">✓</span>Todo el plan mensual</li>
+        <li><span class="check">✓</span>2 meses gratis</li>
+        <li><span class="check">✓</span>Soporte prioritario</li>
+        <li><span class="check">✓</span>Carga por foto y archivo IA</li>
+        <li><span class="check">✓</span>Acceso anticipado a nuevas funciones</li>
       </ul>
       <a href="#" class="pricing-btn">Elegir anual</a>
     </div>
   </div>
 </section>
- 
+
 <!-- CTA -->
 <section class="cta">
   <h2 class="cta-title">¿Listo para <span>cuadrar</span> tu negocio?</h2>
   <p class="cta-sub">Únete a los negocios dominicanos que ya usan Cuadralo. 15 días gratis, sin compromisos.</p>
   <div class="cta-stores">
     <a href="#" class="btn-store btn-apple">
-      <span class="btn-store-icon">🍎</span>
+      <span class="btn-store-icon">
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      </span>
       <div class="btn-store-text"><span class="btn-store-small">Disponible en</span><span class="btn-store-big">App Store</span></div>
     </a>
     <a href="#" class="btn-store btn-android">
-      <span class="btn-store-icon">▶</span>
+      <span class="btn-store-icon">
+        <svg viewBox="0 0 24 24" fill="#3B9EDE" xmlns="http://www.w3.org/2000/svg"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l15 8.5c.6.34.6 1.26 0 1.6l-15 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+      </span>
       <div class="btn-store-text"><span class="btn-store-small">Disponible en</span><span class="btn-store-big">Google Play</span></div>
     </a>
   </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo"><span>Cuadralo</span></div>
@@ -423,6 +432,6 @@ footer {
     <a href="#">Soporte</a>
   </div>
 </footer>
- 
+
 </body>
 </html>
